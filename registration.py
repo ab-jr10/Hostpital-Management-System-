@@ -4,7 +4,6 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
 from datetime import datetime
-from numpy import column_stack
 
 
 
@@ -172,10 +171,10 @@ class Registration:
 
         #################  detail frame  ############
 
-        Detail_Frame = Frame(self.root, relief=RIDGE, bg="#CCCCFF")
+        Detail_Frame = Frame(self.root, relief= RIDGE, bg="#CCCCFF")
         Detail_Frame.place(x= 500, y= 100, width= 820, height= 630)
         
-        Detail_label = Label(Detail_Frame, font=("arial", 11, "bold"), pady=10, padx=2, width=95, text="Date\t Ref Id\t Firstname   Lastname   Mobile No.   Address   Pincode   Gender   Membership")
+        Detail_label = Label(Detail_Frame, font=("arial", 11, "bold"), pady=10, padx=2, width=95, text="Date\t Ref Id\t Firstname    Lastname    Mobile No.    Address    Pincode    Gender    Membership")
         Detail_label.grid(row= 0, column= 0, columnspan= 4, sticky= "w")
         Detail_label_text = Text(Detail_Frame, width= 123, height= 34, font= ("arial", 12))
         Detail_label_text.grid(row= 1, column= 0, columnspan= 4)
@@ -186,6 +185,14 @@ class Registration:
 
         receipt_btn = Button(Detail_Frame, padx= 15, bd= 5, font=("arial", 12, "bold"), bg= "#ff9966", width= 20, text= "Receipt")
         receipt_btn.grid(row= 2, column= 0)
+        
+        
+        reset_btn = Button(Detail_Frame, padx= 15, bd= 5, font=("arial", 12, "bold"), bg= "#ff9966", width= 20, text= "Reset")
+        reset_btn.grid(row= 2, column= 1)
+        
+        
+        exit_btn = Button(Detail_Frame, padx= 15, bd= 5, font=("arial", 12, "bold"), bg= "#ff9966", width= 20, text= "Exit")
+        exit_btn.grid(row= 2, column= 2)
 
 
 
